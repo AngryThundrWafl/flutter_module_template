@@ -67,6 +67,7 @@ unlinked.ds
 unlinked_spec.ds
 
 # Android related
+.android/
 android/
 android/*
 !.android/build.gradle
@@ -81,6 +82,7 @@ android/*
 *.jks
 
 # iOS/XCode related
+.ios/
 ios/
 ios/*
 **/ios/**/*.mode1v3
