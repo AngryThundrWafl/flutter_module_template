@@ -70,3 +70,4 @@ RUN mkdir /root/.android \
 RUN git clone https://github.com/flutter/flutter.git -b stable /usr/local/flutter
 RUN flutter upgrade
 RUN yes "y" | flutter doctor --android-licenses
+RUN flutter pub global activate junitreport
