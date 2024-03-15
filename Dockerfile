@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64/v8 debian:latest AS build-env
+FROM --platform=linux/amd64 debian:latest AS build-env
 ENV DEBIAN_FRONTEND="noninteractive"
 ENV JAVA_VERSION="17"
 ENV ANDROID_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip"
@@ -68,4 +68,5 @@ RUN mkdir /root/.android \
 
 # Clone the flutter repo
 RUN git clone https://github.com/flutter/flutter.git -b stable /usr/local/flutter
+RUN flutter upgrade
 RUN yes "y" | flutter doctor --android-licenses
